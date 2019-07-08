@@ -14,7 +14,7 @@
       <module name="go-together.rest" target="1.5" />
       <module name="go-together.util" target="1.5" />
       <module name="gotogether" target="1.5" />
-      <module name="rest" target="1.5" />
+      <module name="rest" target="11" />
       <module name="util" target="1.5" />
     </bytecodeTargetLevel>
   </component>
