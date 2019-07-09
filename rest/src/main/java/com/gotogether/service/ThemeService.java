@@ -15,4 +15,7 @@ public interface ThemeService {
 
     void add(List<Theme> themes);
 
+    @Deprecated
+    void truncate();
+
 }

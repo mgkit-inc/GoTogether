@@ -21,6 +21,7 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
+        themeService.truncate();
         themeService.add(
                 List.of(
                         new Theme("Кино"),
