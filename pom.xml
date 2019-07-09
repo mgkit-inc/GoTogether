@@ -12,6 +12,7 @@
     <modules>
         <module>util</module>
         <module>rest</module>
+        <module>repos</module>
     </modules>
 
     <properties>
