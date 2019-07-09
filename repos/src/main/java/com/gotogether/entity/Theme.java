@@ -15,6 +15,10 @@ public class Theme {
     public Theme() {
     }
 
+    public Theme(String title) {
+        this.title = title;
+    }
+
     public long getId() {
         return id;
     }

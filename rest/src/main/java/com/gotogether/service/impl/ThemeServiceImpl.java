@@ -6,6 +6,7 @@ import com.gotogether.service.ThemeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,4 +29,13 @@ public class ThemeServiceImpl implements ThemeService {
         return themeRepo.findById(id);
     }
 
+    @Override
+    public void add(Theme theme) {
+        themeRepo.save(theme);
+    }
+
+    @Override
+    public void add(List<Theme> themes) {
+        themeRepo.saveAll(themes);
+    }
 }

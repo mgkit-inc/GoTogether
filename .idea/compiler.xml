@@ -12,10 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="go-together.rest" target="1.5" />
-      <module name="go-together.util" target="1.5" />
       <module name="GoTogether" target="11" />
-      <module name="gotogether" target="1.5" />
       <module name="model" target="11" />
       <module name="repos" target="11" />
       <module name="rest" target="11" />
