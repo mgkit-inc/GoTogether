@@ -1,15 +1,18 @@
 package com.gotogether.runners;
 
+import com.gotogether.app.Profiles;
 import com.gotogether.entity.Theme;
 import com.gotogether.service.ThemeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@Profile(Profiles.DEV)
 public class DataLoader implements ApplicationRunner {
 
     private final ThemeService themeService;
