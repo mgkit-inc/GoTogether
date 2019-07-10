@@ -38,4 +38,9 @@ public class ThemeServiceImpl implements ThemeService {
     public void add(List<Theme> themes) {
         themeRepo.saveAll(themes);
     }
+
+    @Override
+    public void truncate() {
+        themeRepo.deleteAll();
+    }
 }
