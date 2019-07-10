@@ -35,8 +35,8 @@ public class ThemeServiceImpl implements ThemeService {
     }
 
     @Override
-    public void add(List<Theme> themes) {
-        themeRepo.saveAll(themes);
+    public List<Theme> add(List<Theme> themes) {
+        return themeRepo.saveAll(themes);
     }
 
     @Override

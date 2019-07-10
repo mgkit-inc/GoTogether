@@ -9,10 +9,12 @@
         <module name="util" />
         <module name="repos" />
         <module name="rest" />
+        <module name="integration-tests" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="GoTogether" target="11" />
+      <module name="integration-tests" target="11" />
       <module name="model" target="11" />
       <module name="repos" target="11" />
       <module name="rest" target="11" />

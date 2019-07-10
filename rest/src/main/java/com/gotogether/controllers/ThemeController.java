@@ -29,8 +29,8 @@ public class ThemeController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void add(@RequestBody List<Theme> themes) {
-        themeService.add(themes);
+    public List<Theme> add(@RequestBody List<Theme> themes) {
+        return themeService.add(themes);
     }
 
 }

@@ -1,6 +1,8 @@
 package com.gotogether.service;
 
+import com.gotogether.app.Profiles;
 import com.gotogether.entity.Theme;
+import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,9 +15,9 @@ public interface ThemeService {
 
     void add(Theme theme);
 
-    void add(List<Theme> themes);
+    List<Theme> add(List<Theme> themes);
 
-    @Deprecated
+    @Profile(Profiles.DEV)
     void truncate();
 
 }
