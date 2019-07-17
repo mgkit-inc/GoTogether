@@ -3,10 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GoTogether.iml" filepath="$PROJECT_DIR$/.idea/GoTogether.iml" />
-      <module fileurl="file://$PROJECT_DIR$/integration-tests/integration-tests.iml" filepath="$PROJECT_DIR$/integration-tests/integration-tests.iml" />
-      <module fileurl="file://$PROJECT_DIR$/repos/repos.iml" filepath="$PROJECT_DIR$/repos/repos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rest/rest.iml" filepath="$PROJECT_DIR$/rest/rest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
     </modules>
   </component>
 </project>
