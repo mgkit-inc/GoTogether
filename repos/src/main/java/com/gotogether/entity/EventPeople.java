@@ -2,76 +2,68 @@ package com.gotogether.entity;
 
 import javax.persistence.*;
 
-@Entity(name = "eventpeople")
+@Entity(name = "event_people")
 public class EventPeople {
-    private enum EventPeopleStatus {
-        WAITFORACCEPT,
-        ACCEPTED,
-        REJECTED
-    }
-    private enum EventUsersPermissions {
-        ADMIN,
-        MODERATOR,
-        MEMBER
-    }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @Embedded
+    private
+    EventPeopleKey key;
 
-    @Column(nullable = false)
-    private long eventId;
+    @Column(name = "permission_id")
+    private int permissionId;
 
-    @Column(nullable = false)
-    private long userId;
-
-    @Column(nullable = false)
-    private EventPeopleStatus isGo;
-
-    @Column(nullable = false)
-    private EventUsersPermissions permission;
+    @Column(name = "status_id")
+    private int statusId;
 
     public EventPeople() {
-
     }
 
-    public EventPeople(long eventId, long userId, EventPeopleStatus isGo, EventUsersPermissions permission) {
-        this.eventId = eventId;
-        this.userId = userId;
-        this.isGo = isGo;
-        this.permission = permission;
+    public EventPeople(EventPeopleKey key, EventUsersPermissions permission, EventPeopleStatus status) {
+        this.key = key;
+        this.permissionId = permission.getId();
+        this.statusId = status.getId();
     }
 
-    public long getEventId() {
-        return eventId;
+    public EventPeopleKey getKey() {
+        return key;
     }
 
-    public void setEventId(long eventId) {
-        this.eventId = eventId;
+    public void setKey(EventPeopleKey key) {
+        this.key = key;
     }
 
-    public long getUserId() {
-        return userId;
+    public EventPeopleStatus getStatus() {
+        return EventPeopleStatus.parse(statusId)
+                .orElseThrow(() -> new IllegalArgumentException("Unknown status id: " + statusId));
     }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public void setStatus(EventPeopleStatus status) {
+        this.statusId = status.getId();
     }
 
-    public EventPeopleStatus getIsGo() {
-        return isGo;
+    public int getPermissionId() {
+        return permissionId;
     }
 
-    public void setIsGo(EventPeopleStatus isGo) {
-        this.isGo = isGo;
+    public void setPermissionId(int permissionId) {
+        this.permissionId = permissionId;
+    }
+
+    public int getStatusId() {
+        return statusId;
+    }
+
+    public void setStatusId(int statusId) {
+        this.statusId = statusId;
     }
 
     public EventUsersPermissions getPermission() {
-        return permission;
+        return EventUsersPermissions.parse(permissionId)
+                .orElseThrow(() -> new IllegalArgumentException("Unknown permission id: " + statusId));
     }
 
-    public void setPermission(EventUsersPermissions permission) {
-        this.permission = permission;
+    public void setEventUsersPermissions(EventUsersPermissions permission) {
+        this.permissionId = permission.getId();
     }
-
 }

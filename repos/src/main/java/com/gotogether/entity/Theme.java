@@ -1,37 +1,32 @@
 package com.gotogether.entity;
 
-import javax.persistence.*;
+import java.util.Optional;
 
-@Entity(name = "themes")
-public class Theme {
+public enum Theme {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    ENTERTAINMENT(0),
+    CINEMA(1),
+    MEETUP(2);
 
-    @Column(unique = true, nullable = false)
-    private String title;
+    private int id;
 
-    public Theme() {
-    }
-
-    public Theme(String title) {
-        this.title = title;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
+    Theme(int id) {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public int getId() {
+        return id;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public static Optional<Theme> parse(int themeId) {
+        Theme theme = null;
+        for (Theme item : Theme.values()) {
+            if (item.getId() == themeId) {
+                theme = item;
+                break;
+            }
+        }
+        return Optional.ofNullable(theme);
     }
+
 }
