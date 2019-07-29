@@ -14,6 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="GoTogether" target="11" />
+      <module name="gotogether" target="11" />
       <module name="integration-tests" target="11" />
       <module name="model" target="11" />
       <module name="repos" target="11" />

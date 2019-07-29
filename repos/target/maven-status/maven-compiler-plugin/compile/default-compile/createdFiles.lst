@@ -1,0 +1,15 @@
+com\gotogether\entity\EventPeople.class
+com\gotogether\entity\Token.class
+com\gotogether\ReposConfig.class
+com\gotogether\entity\EventVisibility.class
+com\gotogether\entity\EventPeopleKey.class
+com\gotogether\repos\EventRepo.class
+com\gotogether\repos\EventPeopleRepo.class
+com\gotogether\repos\UserRepo.class
+com\gotogether\entity\Event.class
+com\gotogether\repos\TokenRepo.class
+com\gotogether\entity\EventPrivacy.class
+com\gotogether\entity\EventUsersPermissions.class
+com\gotogether\entity\Theme.class
+com\gotogether\entity\EventPeopleStatus.class
+com\gotogether\entity\User.class

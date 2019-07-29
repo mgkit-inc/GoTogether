@@ -1,5 +1,6 @@
 package com.gotogether.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -7,14 +8,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class AuthConfig {
 
-    // temporal solution for disabling default spring login screen
-    @Override
-    protected void configure(HttpSecurity security) throws Exception
-    {
-        security.httpBasic().disable();
-        security.cors().and().csrf().disable(); // TODO: create spring profile for developing
+    @Bean(name = "accessKey")
+    public String getAccessKey() {
+        return System.getProperty("server.access.key");
+    }
+    @Bean(name = "refreshKey")
+    public String getRefreshKey() {
+        return System.getProperty("server.refresh.key");
     }
 
 }

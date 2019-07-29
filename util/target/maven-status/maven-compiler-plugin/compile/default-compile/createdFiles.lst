@@ -1,0 +1,6 @@
+com\gotogether\json\JsonUtil.class
+com\gotogether\unsafe\UnsafeFunction.class
+com\gotogether\unsafe\UnsafeTools.class
+com\gotogether\unsafe\UnsafeRunnable.class
+com\gotogether\app\Profiles.class
+com\gotogether\unsafe\UnsafeCallable.class

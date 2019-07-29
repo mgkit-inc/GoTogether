@@ -15,4 +15,11 @@ public class TokenDTO {
         this.refreshToken = refreshToken;
     }
 
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public String getRefreshToken() {
+        return refreshToken;
+    }
 }
