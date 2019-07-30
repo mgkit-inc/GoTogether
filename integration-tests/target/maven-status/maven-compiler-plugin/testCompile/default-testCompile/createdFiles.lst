@@ -1,0 +1,6 @@
+gotogether\BaseControllerTest.class
+gotogether\BaseTest.class
+gotogether\config\MainTestConfig.class
+gotogether\AuthControllerTest.class
+gotogether\config\H2TestConfig.class
+gotogether\BaseControllerTest$HttpMethod.class
